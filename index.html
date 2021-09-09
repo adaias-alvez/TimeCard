@@ -31,24 +31,8 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .all .card1,
-        .all .card2
-        {
-            background-image: url('img/viado.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 340px;
-            height: 500px;
-            margin: 30px;
-            border-radius: 20px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: solid 4px #f1f2ff
-        }
-        .card1::before,
-        .card2::before
+        .all .card1
+        .card1::before
         {
             content: '';
             position: absolute;
@@ -62,14 +46,12 @@
             opacity: 0;
             border-radius: 30%;
         }
-        .card1.active::before,
-        .card2.active::before
+        .card1.active::before
         {
             opacity: 1;
             border-radius: 15px;
         }
-        .card1 .nav,
-        .card2 .nav
+        .card1 .nav
         {
             position: absolute;
             bottom: 0px;
@@ -115,45 +97,39 @@
             -webkit-text-fill-color: transparent;
             transition: .3s;
         }
-        .card1.active .dia,
-        .card2.active .dia
+        .card1.active .dia
         {
             background: -webkit-linear-gradient(45deg,  #5a4ff0, #ff9684);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .card1.active .dia:nth-child(1),
-        .card2.active .dia:nth-child(1)
+        .card1.active .dia:nth-child(1)
         {
             background: -webkit-linear-gradient(45deg,  #5a4ff0, #ff9684);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             border-bottom: solid 1px #5a4ff0;
         }
-        .card1.active .dia:nth-child(3),
-        .card2.active .dia:nth-child(3)
+        .card1.active .dia:nth-child(3)
         {
             background: -webkit-linear-gradient(45deg,  #5a4ff0, #ff9684);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             border-top: solid 1px #5a4ff0;
         }
-        .card1.active .fa,
-        .card2.active .fa
+        .card1.active .fa
         {
             background: -webkit-linear-gradient(45deg,  #5a4ff0, #ff9684);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .card1.active .grau,
-        .card2.active .grau
+        .card1.active .grau
         {
             background: -webkit-linear-gradient(45deg,  #5a4ff0, #ff9684);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .card1 .dark,
-        .card2 .dark
+        .card1 .dark
         {
             position: absolute;
             right: 10px;
@@ -173,16 +149,14 @@
             -webkit-text-fill-color: transparent;
             transition: .3s;
         }
-        .card1.active .dark .fa,
-        .card2.active .dark .fa
+        .card1.active .dark .fa
         {
             background: -webkit-linear-gradient(45deg,  #e76114, #ffb9b9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .card1 .temp,
-        .card2 .temp
+        .card1 .temp
         {
             position: absolute;
             color: white;
@@ -191,23 +165,20 @@
             right: 20px;
             top: 290px;
         }
-        .card1 h2,
-        .card2 h2
+        .card1 h2
         {
             position: absolute;
             right: -5px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-        .card1 h5,
-        .card2 h5
+        .card1 h5
         {
             position: absolute;
             right: -10px;
             font-size: 20px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-        .card1 span,
-        .card2 span
+        .card1 span
         {
             position: absolute;
             width: 8px;
@@ -250,11 +221,7 @@
         .card1.active span:nth-child(1),
         .card1.active span:nth-child(2),
         .card1.active span:nth-child(3),
-        .card1.active span:nth-child(6),
-        .card2.active span:nth-child(1),
-        .card2.active span:nth-child(2),
-        .card2.active span:nth-child(3),
-        .card2.active span:nth-child(6)
+        .card1.active span:nth-child(6)
         {
             background: rgb(26, 14, 44);
         }
@@ -304,48 +271,13 @@
             </div>
         
         </div>
-    </div>
-
-    <div class="card2">
-        <span></span><span></span><span></span><span></span><span></span><span></span>
-        <div class="dark">
-            <i class="fa fa-moon-o" aria-hidden="true"></i>
         </div>
-        <div class="temp">
-            <h2>28º</h2><br> <h5>Ensolarado</h5>
-        </div>
-
-        <div class="nav">
-            
-            <div class="dia">
-                Sexta-feira
-                <i class="fa fa-cloud" aria-hidden="true"></i>
-                <div class="grau">20º</div>
-            </div>
-            <div class="dia">
-                Sábado
-                <i class="fa fa-cloud" aria-hidden="true"></i>
-                <div class="grau">28º</div>
-            </div>
-            <div class="dia">
-                Domingola
-                <i class="fa fa-cloud" aria-hidden="true"></i>
-                <div class="grau">27º</div>
-            </div>
-        
-        </div>
-    </div>
-
-    </div>
 
 </section>
     
 </body>
 <script>
     document.querySelector('.card1').onclick = function(){
-        this.classList.toggle('active');
-    }
-    document.querySelector('.card2').onclick = function(){
         this.classList.toggle('active');
     }
     document.querySelector('section').onclick = function(){
